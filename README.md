@@ -20,6 +20,10 @@ or
 
     ddev open -t
 
+or 
+
+https://ddev-typo3.ddev.site https://127.0.0.1:32769 
+
 ## Login
 TYPO3 Login
 dev-admin : admin123
