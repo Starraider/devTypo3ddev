@@ -1,14 +1,15 @@
+# devTYPO3v10DDEV
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
 ![GitHub](https://img.shields.io/github/license/Starraider/devTypo3ddev)
 [![CodeFactor](https://www.codefactor.io/repository/github/starraider/devtypo3ddev/badge)](https://www.codefactor.io/repository/github/starraider/devtypo3ddev)
 ![GitHub issues](https://img.shields.io/github/issues/Starraider/devTypo3ddev)
 
-# devTYPO3v10DDEV
-
 This is my local developer enviroment.
 My base sitepackage skom_sitepackage is preinstalled.
 
 ## Installation
+
     ddev start
     ddev composer install
     ddev db-restore
@@ -16,20 +17,42 @@ My base sitepackage skom_sitepackage is preinstalled.
 
     ddev open 
 
-or 
+or
 
     ddev open -t
 
-or 
+or
 
-https://ddev-typo3.ddev.site https://127.0.0.1:32769 
+<https://ddev-typo3.ddev.site>
 
 ## Login
+
 TYPO3 Login
 dev-admin : dev-admin
 Intalltool: admin123
 
-## cron
+## Datenbank
+
+phpMyAdmin:
+<http://ddev-typo3.ddev.site:8036/>
+
+(Attention: don't use "https://" !)
+
+## Defined commands
+
+## db-restore
+
+Run 'ddev db-restore' for restoring the DB
+
+## fileadmin-restore
+
+Run 'ddev fileadmin-restore' to restore the files in fileadmin.
+
+## warmup-dev
+
+If you run 'ddev warmup-dev' every page from the sitemap will be fetched by wget to warm up the caches. 
+
+### cron
 
 Run 'ddev t3cron' if you need the Scheduler.
 
