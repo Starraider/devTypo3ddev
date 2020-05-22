@@ -24,7 +24,7 @@ return [
     ],
     'EXTCONF' => [
         'helhum-typo3-console' => [
-            'initialUpgradeDone' => '10.3',
+            'initialUpgradeDone' => '10.4',
         ],
         'lang' => [
             'availableLanguages' => [
