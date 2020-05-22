@@ -10,6 +10,6 @@ ddev exec tar -xzvf ./.ddev/backup/fileadmin.tar.gz
 
 ddev typo3cms cache:flush
 
-ddev typo3cms cleanup:updatereferenceindex
+ddev typo3cms database:updateschema
 
 ddev exec rm -rf ./public/fileadmin-org
