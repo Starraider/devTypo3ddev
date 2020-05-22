@@ -26,7 +26,7 @@ https://ddev-typo3.ddev.site https://127.0.0.1:32769
 
 ## Login
 TYPO3 Login
-dev-admin : admin123
+dev-admin : dev-admin
 Intalltool: admin123
 
 ## cron
