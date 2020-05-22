@@ -5,14 +5,19 @@
 
 # devTYPO3v10DDEV
 
+This is my local developer enviroment.
+My base sitepackage skom_sitepackage is preinstalled.
+
 ## Installation
     ddev start
-    ddev composer i
+    ddev composer install
     ddev db-restore
     ddev fileadmin-restore
 
     ddev open 
+
 or 
+
     ddev open -t
 
 ## Login
