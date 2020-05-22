@@ -1,6 +1,10 @@
-base: /
+base: 'https://ddev-typo3.ddev.site/'
 baseVariants: {  }
-errorHandling: {  }
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=5'
 languages:
   -
     title: English
@@ -12,24 +16,11 @@ languages:
     iso-639-1: en
     navigationTitle: English
     hreflang: en-US
-    direction: ''
-    flag: us
+    direction: ltr
+    flag: en-us-gb
+    websiteTitle: ''
   -
-    title: Dansk
-    enabled: true
-    languageId: '1'
-    base: /da/
-    typo3Language: da
-    locale: da_DK.UTF-8
-    iso-639-1: da
-    navigationTitle: Dansk
-    hreflang: da-DK
-    direction: ''
-    fallbackType: fallback
-    fallbacks: ''
-    flag: dk
-  -
-    title: German
+    title: Deutsch
     enabled: true
     languageId: '2'
     base: /de/
@@ -38,10 +29,15 @@ languages:
     iso-639-1: de
     navigationTitle: Deutsch
     hreflang: de-DE
-    direction: ''
+    direction: ltr
     fallbackType: fallback
-    fallbacks: '1,0'
+    fallbacks: '0'
     flag: de
+    websiteTitle: 'TYPO3 Entwickler'
 rootPageId: 1
-routes: {  }
-websiteTitle: ''
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nDisallow: /content-examples/\r\nDisallow: /en/content-examples/\r\n# Keine Backups \r\nDisallow: *.tar.gz\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+websiteTitle: 'TYPO3 Developer'
