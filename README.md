@@ -8,6 +8,16 @@
 This is my local developer enviroment.
 My base sitepackage skom_sitepackage is preinstalled.
 
+- [devTYPO3v10DDEV](#devtypo3v10ddev)
+  - [Installation](#installation)
+  - [Login](#login)
+  - [Database](#database)
+  - [Defined commands](#defined-commands)
+    - [db-restore](#db-restore)
+    - [fileadmin-restore](#fileadmin-restore)
+    - [warmup-dev](#warmup-dev)
+    - [cron](#cron)
+
 ## Installation
 
     ddev start
@@ -31,7 +41,7 @@ TYPO3 Login
 dev-admin : dev-admin
 Intalltool: admin123
 
-## Datenbank
+## Database
 
 phpMyAdmin:
 <http://ddev-typo3.ddev.site:8036/>
@@ -40,15 +50,15 @@ phpMyAdmin:
 
 ## Defined commands
 
-## db-restore
+### db-restore
 
 Run 'ddev db-restore' for restoring the DB
 
-## fileadmin-restore
+### fileadmin-restore
 
 Run 'ddev fileadmin-restore' to restore the files in fileadmin.
 
-## warmup-dev
+### warmup-dev
 
 If you run 'ddev warmup-dev' every page from the sitemap will be fetched by wget to warm up the caches. 
 
