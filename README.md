@@ -1,18 +1,19 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
-
-
+![GitHub](https://img.shields.io/github/license/Starraider/devTypo3ddev)
+[![CodeFactor](https://www.codefactor.io/repository/github/starraider/devtypo3ddev/badge)](https://www.codefactor.io/repository/github/starraider/devtypo3ddev)
+![GitHub issues](https://img.shields.io/github/issues/Starraider/devTypo3ddev)
 
 # devTYPO3v10DDEV
 
 ## Installation
-  ddev start
-  ddev composer i
-  ddev db-restore
-  ddev fileadmin-restore
+    ddev start
+    ddev composer i
+    ddev db-restore
+    ddev fileadmin-restore
 
-  ddev open 
+    ddev open 
 or 
-  ddev open -t
+    ddev open -t
 
 ## Login
 TYPO3 Login
