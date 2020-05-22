@@ -7,7 +7,7 @@ FULLURL=${DDEV_PRIMARY_URL}
 HTTPS=""
 if [ ${DDEV_PRIMARY_URL%://*} = "https" ]; then HTTPS=true; fi
 
-BROWSER='Firefox Developer Edition'
+BROWSER='Google Chrome'
 
 while :; do
     case $1 in
