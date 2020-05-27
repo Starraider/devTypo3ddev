@@ -17,10 +17,10 @@ set('repository', 'https://github.com/Starraider/devTypo3ddev.git');
 set('git_tty', true); 
 
 // Shared files/dirs between deploys 
-add('shared_dirs', [
+set('shared_dirs', [
     'config'
 ]);
-add('shared_files', [
+set('shared_files', [
     'composer.json',
     '{{typo3_webroot}}/typo3conf/AdditionalConfiguration.php',
     '{{typo3_webroot}}/typo3conf/LocalConfiguration.php',
