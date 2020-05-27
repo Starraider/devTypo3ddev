@@ -12,11 +12,15 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Installation](#installation)
   - [Login](#login)
   - [Database](#database)
+  - [TYPO3-Console](#typo3-console)
+    - [Flush all caches](#flush-all-caches)
   - [Defined commands](#defined-commands)
+    - [db-backup](#db-backup)
     - [db-restore](#db-restore)
     - [fileadmin-restore](#fileadmin-restore)
     - [warmup-dev](#warmup-dev)
     - [cron](#cron)
+  - [Deployment](#deployment)
 
 ## Installation
 
@@ -48,11 +52,23 @@ phpMyAdmin:
 
 (Attention: don't use "https://" !)
 
+## TYPO3-Console
+
+Use 'ddev typo3cms ...' to use the TYPO3-Console.
+
+### Flush all caches
+
+    ddev typo3cms cache:flush
+
 ## Defined commands
+
+### db-backup
+
+Run 'ddev db-backup' to generate a backup of the DB.
 
 ### db-restore
 
-Run 'ddev db-restore' for restoring the DB
+Run 'ddev db-restore' for restoring the DB.
 
 ### fileadmin-restore
 
@@ -65,6 +81,12 @@ If you run 'ddev warmup-dev' every page from the sitemap will be fetched by wget
 ### cron
 
 Run 'ddev t3cron' if you need the Scheduler.
+
+## Deployment
+
+    php vendor/bin/dep deploy -vv beta
+
+    php vendor/bin/dep unlock -vv beta 
 
 ---
 
