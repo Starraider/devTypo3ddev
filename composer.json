@@ -15,7 +15,8 @@
     "sort-packages": true
   },
   "require": {
-    "helhum/typo3-console": "^6.0",
+    "helhum/typo3-console": "^6.3",
+    "skom/skom-sitepackage": "dev-develop",
     "typo3/cms-about": "^10.4",
     "typo3/cms-backend": "^10.4",
     "typo3/cms-belog": "^10.4",
@@ -48,8 +49,7 @@
     "typo3/cms-t3editor": "^10.4",
     "typo3/cms-tstemplate": "^10.4",
     "typo3/cms-viewpage": "^10.4",
-    "typo3/cms-workspaces": "^10.4",
-    "skom/skom-sitepackage": "dev-develop"
+    "typo3/cms-workspaces": "^10.4"
   },
   "require-dev": {
     "deployer/dist": "^6.8",

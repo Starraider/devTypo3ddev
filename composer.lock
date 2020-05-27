@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35682fc56b21da76175f06afc94c98a9",
+    "content-hash": "dc100b0c59405484871fefecdf7b8214",
     "packages": [
         {
             "name": "bk2k/bootstrap-package",
@@ -875,16 +875,16 @@
         },
         {
             "name": "helhum/typo3-console",
-            "version": "v6.3.0",
+            "version": "v6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/TYPO3-Console.git",
-                "reference": "43b72dc44334e298e9e4436bd1efe1ea53832576"
+                "reference": "82fa4dd2655bf8c99a8fb25ec13735176e506522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/43b72dc44334e298e9e4436bd1efe1ea53832576",
-                "reference": "43b72dc44334e298e9e4436bd1efe1ea53832576",
+                "url": "https://api.github.com/repos/TYPO3-Console/TYPO3-Console/zipball/82fa4dd2655bf8c99a8fb25ec13735176e506522",
+                "reference": "82fa4dd2655bf8c99a8fb25ec13735176e506522",
                 "shasum": ""
             },
             "require": {
@@ -961,7 +961,7 @@
                 "console",
                 "typo3"
             ],
-            "time": "2020-05-11T20:44:36+00:00"
+            "time": "2020-05-26T12:29:05+00:00"
         },
         {
             "name": "helhum/typo3-console-plugin",
