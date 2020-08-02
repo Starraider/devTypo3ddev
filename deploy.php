@@ -37,7 +37,9 @@ add('writable_dirs', [
 set('allow_anonymous_stats', false);
 
 // Hosts
+inventory('./config/deployer/hosts.yaml');
 
+/*
 host('beta')
     ->hostname('p203341.typo3server.info')
     ->stage('beta')
@@ -47,7 +49,8 @@ host('beta')
     ->port(22)
     ->forwardAgent(true)
     ->set('writable_mode', 'chmod')
-    ->set('deploy_path', '~/html/devTypo3ddev/beta/');    
+    ->set('deploy_path', '~/html/devTypo3ddev/beta/'); 
+*/   
     
 // Tasks
 task('pwd', function () {

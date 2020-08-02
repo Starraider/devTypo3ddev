@@ -25,3 +25,4 @@ node_modules
 !/public/.htaccess
 
 /devTypo3ddev
+config/deployer/hosts.yaml
