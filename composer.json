@@ -17,6 +17,7 @@
   "require": {
     "helhum/typo3-console": "^6.3",
     "skom/skom-sitepackage": "dev-develop",
+    "sourcebroker/deployer-extended-typo3": "^13.1",
     "typo3/cms-about": "^10.4",
     "typo3/cms-backend": "^10.4",
     "typo3/cms-belog": "^10.4",
@@ -52,7 +53,6 @@
     "typo3/cms-workspaces": "^10.4"
   },
   "require-dev": {
-    "deployer/dist": "^6.8",
     "friendsofphp/php-cs-fixer": "^2.16",
     "helmich/typo3-typoscript-lint": "^2.1",
     "php-parallel-lint/php-parallel-lint": "^1.0",
@@ -62,6 +62,10 @@
     "squizlabs/php_codesniffer": "^3.5",
     "typo3/cms-adminpanel": "^10.4"
   },
+  "conflict":  {
+		"guzzlehttp/guzzle": ">= 6.5.0",
+		"symfony/polyfill-intl-idn": ">= 1.18.0"
+	},
   "scripts": {
     "typo3-cms-scripts": [
       "typo3cms install:fixfolderstructure",
