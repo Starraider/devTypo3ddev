@@ -18,7 +18,7 @@ host('beta')
     ->set('branch', 'master')
     ->set('writable_mode', 'chmod')
     ->set('public_urls', ['https://beta.skom-support.de'])
-    ->set('deploy_path', '~/html/devTypo3ddev/beta/');
+    ->set('deploy_path', '~/html/devTypo3ddev/beta');
 
 //********************************* */
 // Project name
