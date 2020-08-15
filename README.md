@@ -4,6 +4,8 @@
 ![GitHub](https://img.shields.io/github/license/Starraider/devTypo3ddev)
 [![CodeFactor](https://www.codefactor.io/repository/github/starraider/devtypo3ddev/badge)](https://www.codefactor.io/repository/github/starraider/devtypo3ddev)
 ![GitHub issues](https://img.shields.io/github/issues/Starraider/devTypo3ddev)
+![Lint Code Base](https://github.com/Starraider/devTypo3ddev/workflows/Lint%20Code%20Base/badge.svg)
+
 
 This is my local developer enviroment.
 My base sitepackage skom_sitepackage is preinstalled.
