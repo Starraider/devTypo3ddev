@@ -100,9 +100,9 @@ Run 'ddev t3cron' if you need the Scheduler.
 
 #### TypoScript Linter
 
-typoscript-lint path/to/your.typoscript
+    typoscript-lint path/to/your.typoscript
 f.e.:
-typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
+    typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ---
 
