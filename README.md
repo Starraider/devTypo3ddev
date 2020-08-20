@@ -24,6 +24,9 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [warmup-dev](#warmup-dev)
     - [cron](#cron)
   - [Deployment](#deployment)
+  - [Testing](#testing)
+    - [Linting](#linting)
+      - [TypoScript Linter](#typoscript-linter)
 
 ## Installation
 
@@ -90,6 +93,16 @@ Run 'ddev t3cron' if you need the Scheduler.
     php vendor/bin/dep deploy -vv beta
 
     php vendor/bin/dep unlock -vv beta 
+
+## Testing
+
+### Linting
+
+#### TypoScript Linter
+
+typoscript-lint path/to/your.typoscript
+f.e.:
+typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ---
 
