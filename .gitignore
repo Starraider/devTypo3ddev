@@ -27,3 +27,4 @@ node_modules
 /devTypo3ddev
 config/deployer/hosts.yaml
 deploy copy.php
+.php_cs.cache
