@@ -28,6 +28,7 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
       - [php-cs-fixer](#php-cs-fixer)
+      - [parallel-lint](#parallel-lint)
 
 ## Installation
 
@@ -111,22 +112,30 @@ f.e.:
 
 To fix your php files automaticly:
 
-    php vendor/bin/php-cs-fixer fix path/to/dir
-    php vendor/bin/php-cs-fixer fix path/to/file
+    vendor/bin/php-cs-fixer fix path/to/dir
+    vendor/bin/php-cs-fixer fix path/to/file
 
 If you use the dir syntax all subdirs will be checked as well!
 
 To make a dry run:
 
-    php vendor/bin/php-cs-fixer fix --dry-run path/to/file
+    vendor/bin/php-cs-fixer fix --dry-run path/to/file
 
 To show details use the parameter -v -vv or -vvv
 
 examples:
 
-    php vendor/bin/php-cs-fixer fix packages/customer_sitepackage -v
-    php vendor/bin/php-cs-fixer fix public/typo3conf/ext/skom_sitepackage --dry-run -vvv
+    vendor/bin/php-cs-fixer fix packages/customer_sitepackage -v
+    vendor/bin/php-cs-fixer fix public/typo3conf/ext/skom_sitepackage --dry-run -vvv
 
+#### parallel-lint
+
+    vendor/bin/parallel-lint path/to/dir
+    vendor/bin/parallel-lint path/to/file
+
+examples:
+
+    vendor/bin/parallel-lint public/typo3conf/ext/skom_sitepackage
 
 ---
 
