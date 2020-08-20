@@ -27,6 +27,7 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Testing](#testing)
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
+      - [php-cs-fixer](#php-cs-fixer)
 
 ## Installation
 
@@ -105,6 +106,27 @@ Run 'ddev t3cron' if you need the Scheduler.
 f.e.:
 
     typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
+
+#### php-cs-fixer
+
+To fix your php files automaticly:
+
+    php vendor/bin/php-cs-fixer fix path/to/dir
+    php vendor/bin/php-cs-fixer fix path/to/file
+
+If you use the dir syntax all subdirs will be checked as well!
+
+To make a dry run:
+
+    php vendor/bin/php-cs-fixer fix --dry-run path/to/file
+
+To show details use the parameter -v -vv or -vvv
+
+examples:
+
+    php vendor/bin/php-cs-fixer fix packages/customer_sitepackage -v
+    php vendor/bin/php-cs-fixer fix public/typo3conf/ext/skom_sitepackage --dry-run -vvv
+
 
 ---
 
