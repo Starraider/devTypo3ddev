@@ -5,8 +5,9 @@ require_once(__DIR__ . '/vendor/sourcebroker/deployer-loader/autoload.php');
 new \SourceBroker\DeployerExtendedTypo3\Loader();
 
 set('repository', 'https://github.com/Starraider/devTypo3ddev.git');
-set('bin/php', '/usr/local/bin/php');
+set('bin/php', '');
 set('web_path', 'public/');
+set('git_tty', true);
 
 host('live')
     ->hostname('p203341.typo3server.info')
@@ -16,6 +17,7 @@ host('live')
     ->port(22)
     ->set('branch', 'master')
     ->set('writable_mode', 'chmod')
+    ->forwardAgent(true)
     ->set('public_urls', ['https://www.skom-support.de'])
     ->set('deploy_path', '~/html/devTypo3ddev/live');
 
@@ -27,6 +29,7 @@ host('beta')
     ->port(22)
     ->set('branch', 'master')
     ->set('writable_mode', 'chmod')
+    ->forwardAgent(true)
     ->set('public_urls', ['https://beta.skom-support.de'])
     ->set('deploy_path', '~/html/devTypo3ddev/beta');
 
@@ -37,26 +40,6 @@ host('local')
     ->set('public_urls', ['https://ddev-typo3.ddev.site']);
 
 //********************************* */
-// Project name
-//set('application', 'devTypo3ddev');
-//set('typo3_webroot', 'public');
-//set('http_user', 'p203341');
-
-
-// Hosts
-//inventory('./config/deployer/hosts.yaml');
-/*
-host('beta')
-    ->hostname('p203341.typo3server.info')
-    ->stage('beta')
-    ->user('p203341')
-    ->configFile('~/.ssh/config')
-    ->identityFile('~/.ssh/id_rsa')
-    ->port(22)
-    ->forwardAgent(true)
-    ->set('writable_mode', 'chmod')
-    ->set('deploy_path', '~/html/devTypo3ddev/beta/'); 
-*/   
     
 // Tasks
 task('pwd', function () {
@@ -65,6 +48,4 @@ task('pwd', function () {
 });
 
 
-// [Optional] if deploy fails automatically unlock.
-after('deploy:failed', 'deploy:unlock');
 
