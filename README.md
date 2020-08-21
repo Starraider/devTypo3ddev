@@ -26,6 +26,7 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Testing](#testing)
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
+      - [PHP CodeSniffer](#php-codesniffer)
       - [php-cs-fixer](#php-cs-fixer)
       - [phpstan](#phpstan)
       - [parallel-lint](#parallel-lint)
@@ -94,7 +95,9 @@ Run 'ddev t3cron' if you need the Scheduler.
 
 ## Deployment
 
-For deployment we use [deployer.org](https://deployer.org/).
+For deployment we use [Deployer](https://deployer.org/).
+
+Configuration: deploy.php
 
     php vendor/bin/dep deploy -vv beta
 
@@ -107,18 +110,40 @@ For deployment we use [deployer.org](https://deployer.org/).
 #### TypoScript Linter
 
 Linter for TypoScript.
-More info: <https://github.com/martin-helmich/typo3-typoscript-lint>
+
+[More info>>](https://github.com/martin-helmich/typo3-typoscript-lint)
 
     typoscript-lint path/to/your.typoscript
 
-example:
+Example:
 
     typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
+
+#### PHP CodeSniffer
+
+PHP CodeSniffer is a linter, which can also automatically correct coding standard violations.
+
+Configuration file: phpcs.ruleset.xml
+
+[More info>>](https://github.com/squizlabs/PHP_CodeSniffer)
+
+    vendor/bin/phpcs path/to/dir
+    vendor/bin/phpcs path/to/file
+
+Examples:
+
+    vendor/bin/phpcs packages/customer_sitepackage
+
+Use phpcbf to automatically fix as many errors as possible.
+
+    vendor/bin/phpcbf path/to/dir -vv
+    vendor/bin/phpcbf path/to/file -vvv
 
 #### php-cs-fixer
 
 PHP code standard fixer.
-More info: <https://github.com/FriendsOfPHP/PHP-CS-Fixer>
+
+[More info>>](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
 
 To fix your php files automaticly:
 
@@ -133,7 +158,7 @@ To make a dry run:
 
 To show details use the parameter -v -vv or -vvv
 
-examples:
+Examples:
 
     vendor/bin/php-cs-fixer fix packages/customer_sitepackage -v
     vendor/bin/php-cs-fixer fix public/typo3conf/ext/skom_sitepackage --dry-run -vvv
@@ -141,30 +166,33 @@ examples:
 #### phpstan
 
 PHP linter.
-More info: <https://github.com/phpstan/phpstan>
+
+[More info>>](https://github.com/phpstan/phpstan)
 
     vendor/bin/phpstan analyse --level 0..8 path/to/dir
 
-example:
+Example:
 
     vendor/bin/phpstan analyse -l 5 public/typo3conf/ext/skom_sitepackage
 
 #### parallel-lint
 
 Very fast php linter.
-More info: <https://github.com/php-parallel-lint/PHP-Parallel-Lint>
+
+[More info>>](https://github.com/php-parallel-lint/PHP-Parallel-Lint)
 
     vendor/bin/parallel-lint path/to/dir
     vendor/bin/parallel-lint path/to/file
 
-example:
+Example:
 
     vendor/bin/parallel-lint public/typo3conf/ext/skom_sitepackage
 
 #### phpmd
 
 PHP linter checking for possible bugs, suboptimal code, overcomplicated expressions and unused code.
-More info: <https://github.com/phpmd/phpmd>
+
+[More info>>](https://github.com/phpmd/phpmd)
 
     vendor/bin/phpmd path/to/dir format ruleset
 
@@ -172,18 +200,19 @@ format can be: xml, text, ansi (best for terminal output), html, json.
 
 rulesets are: codesize,unusedcode,naming,cleancode,controversial,design
 
-example:
+Example:
 
     vendor/bin/phpmd public/typo3conf/ext/skom_sitepackage ansi codesize,unusedcode,naming
 
 #### phploc
 
 To get some statistics about your PHP project, you could use phploc
-More info: <https://github.com/sebastianbergmann/phploc>
+
+[More info>>](https://github.com/sebastianbergmann/phploc)
 
     vendor/bin/phploc path/to/dir
 
-example:
+Example:
 
     vendor/bin/phploc packages/customer_sitepackage
     vendor/bin/phploc public/typo3conf/ext/skom_sitepackage
