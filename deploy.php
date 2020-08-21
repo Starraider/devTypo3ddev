@@ -19,7 +19,7 @@ host('live')
     ->set('writable_mode', 'chmod')
     ->forwardAgent(true)
     ->set('public_urls', ['https://www.skom-support.de'])
-    ->set('deploy_path', '~/html/devTypo3ddev/live');
+    ->set('deploy_path', '/home/www/p203341/html/devTypo3ddev/live');
 
 host('beta')
     ->hostname('p203341.typo3server.info')
@@ -31,7 +31,7 @@ host('beta')
     ->set('writable_mode', 'chmod')
     ->forwardAgent(true)
     ->set('public_urls', ['https://beta.skom-support.de'])
-    ->set('deploy_path', '~/html/devTypo3ddev/beta');
+    ->set('deploy_path', '/home/www/p203341/html/devTypo3ddev/beta');
 
 host('local')
     ->hostname('local')
