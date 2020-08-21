@@ -29,6 +29,7 @@ My base sitepackage skom_sitepackage is preinstalled.
       - [TypoScript Linter](#typoscript-linter)
       - [php-cs-fixer](#php-cs-fixer)
       - [parallel-lint](#parallel-lint)
+      - [phploc](#phploc)
 
 ## Installation
 
@@ -136,6 +137,16 @@ examples:
 examples:
 
     vendor/bin/parallel-lint public/typo3conf/ext/skom_sitepackage
+
+#### phploc
+To get some statistics about your project, you could use phploc
+
+    vendor/bin/phploc path/to/dir
+
+example
+
+    vendor/bin/phploc packages/customer_sitepackage
+    vendor/bin/phploc public/typo3conf/ext/skom_sitepackage
 
 ---
 
