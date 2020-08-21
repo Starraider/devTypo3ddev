@@ -29,6 +29,7 @@ My base sitepackage skom_sitepackage is preinstalled.
       - [TypoScript Linter](#typoscript-linter)
       - [php-cs-fixer](#php-cs-fixer)
       - [parallel-lint](#parallel-lint)
+      - [phpmd](#phpmd)
       - [phploc](#phploc)
 
 ## Installation
@@ -105,7 +106,7 @@ Run 'ddev t3cron' if you need the Scheduler.
 
     typoscript-lint path/to/your.typoscript
 
-f.e.:
+example:
 
     typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
 
@@ -131,6 +132,8 @@ examples:
 
 #### parallel-lint
 
+Very fast php linter.
+
     vendor/bin/parallel-lint path/to/dir
     vendor/bin/parallel-lint path/to/file
 
@@ -138,12 +141,27 @@ examples:
 
     vendor/bin/parallel-lint public/typo3conf/ext/skom_sitepackage
 
+#### phpmd
+
+PHP linter checking for possible bugs, suboptimal code, overcomplicated expressions and unused code.
+
+    vendor/bin/phpmd path/to/dir format ruleset
+
+format can be: xml, text, ansi (best for terminal output), html, json.
+
+rulesets are: codesize,unusedcode,naming,cleancode,controversial,design
+
+example:
+
+    vendor/bin/phpmd public/typo3conf/ext/skom_sitepackage ansi codesize,unusedcode,naming
+
 #### phploc
+
 To get some statistics about your project, you could use phploc
 
     vendor/bin/phploc path/to/dir
 
-example
+example:
 
     vendor/bin/phploc packages/customer_sitepackage
     vendor/bin/phploc public/typo3conf/ext/skom_sitepackage
