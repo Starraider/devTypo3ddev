@@ -94,6 +94,8 @@ Run 'ddev t3cron' if you need the Scheduler.
 
 ## Deployment
 
+For deployment we use [deployer.org](https://deployer.org/).
+
     php vendor/bin/dep deploy -vv beta
 
     php vendor/bin/dep unlock -vv beta 
@@ -104,6 +106,9 @@ Run 'ddev t3cron' if you need the Scheduler.
 
 #### TypoScript Linter
 
+Linter for TypoScript.
+More info: <https://github.com/martin-helmich/typo3-typoscript-lint>
+
     typoscript-lint path/to/your.typoscript
 
 example:
@@ -111,6 +116,9 @@ example:
     typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
 
 #### php-cs-fixer
+
+PHP code standard fixer.
+More info: <https://github.com/FriendsOfPHP/PHP-CS-Fixer>
 
 To fix your php files automaticly:
 
@@ -133,6 +141,7 @@ examples:
 #### phpstan
 
 PHP linter.
+More info: <https://github.com/phpstan/phpstan>
 
     vendor/bin/phpstan analyse --level 0..8 path/to/dir
 
@@ -140,11 +149,10 @@ example:
 
     vendor/bin/phpstan analyse -l 5 public/typo3conf/ext/skom_sitepackage
 
-More info: <https://github.com/phpstan/phpstan>
-
 #### parallel-lint
 
 Very fast php linter.
+More info: <https://github.com/php-parallel-lint/PHP-Parallel-Lint>
 
     vendor/bin/parallel-lint path/to/dir
     vendor/bin/parallel-lint path/to/file
@@ -153,11 +161,10 @@ example:
 
     vendor/bin/parallel-lint public/typo3conf/ext/skom_sitepackage
 
-More info: <https://github.com/php-parallel-lint/PHP-Parallel-Lint>
-
 #### phpmd
 
 PHP linter checking for possible bugs, suboptimal code, overcomplicated expressions and unused code.
+More info: <https://github.com/phpmd/phpmd>
 
     vendor/bin/phpmd path/to/dir format ruleset
 
@@ -171,7 +178,8 @@ example:
 
 #### phploc
 
-To get some statistics about your project, you could use phploc
+To get some statistics about your PHP project, you could use phploc
+More info: <https://github.com/sebastianbergmann/phploc>
 
     vendor/bin/phploc path/to/dir
 
