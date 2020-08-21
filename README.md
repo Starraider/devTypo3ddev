@@ -7,7 +7,6 @@
 ![Lint Code Base](https://github.com/Starraider/devTypo3ddev/workflows/Lint%20Code%20Base/badge.svg)
 ![CodeQL](https://github.com/Starraider/devTypo3ddev/workflows/CodeQL/badge.svg)
 
-
 This is my local developer enviroment.
 My base sitepackage skom_sitepackage is preinstalled.
 
@@ -28,6 +27,7 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
       - [php-cs-fixer](#php-cs-fixer)
+      - [phpstan](#phpstan)
       - [parallel-lint](#parallel-lint)
       - [phpmd](#phpmd)
       - [phploc](#phploc)
@@ -86,7 +86,7 @@ Run 'ddev fileadmin-restore' to restore the files in fileadmin.
 
 ### warmup-dev
 
-If you run 'ddev warmup-dev' every page from the sitemap will be fetched by wget to warm up the caches. 
+If you run 'ddev warmup-dev' every page from the sitemap will be fetched by wget to warm up the caches.
 
 ### cron
 
@@ -130,6 +130,18 @@ examples:
     vendor/bin/php-cs-fixer fix packages/customer_sitepackage -v
     vendor/bin/php-cs-fixer fix public/typo3conf/ext/skom_sitepackage --dry-run -vvv
 
+#### phpstan
+
+PHP linter.
+
+    vendor/bin/phpstan analyse --level 0..8 path/to/dir
+
+example:
+
+    vendor/bin/phpstan analyse -l 5 public/typo3conf/ext/skom_sitepackage
+
+More info: <https://github.com/phpstan/phpstan>
+
 #### parallel-lint
 
 Very fast php linter.
@@ -137,9 +149,11 @@ Very fast php linter.
     vendor/bin/parallel-lint path/to/dir
     vendor/bin/parallel-lint path/to/file
 
-examples:
+example:
 
     vendor/bin/parallel-lint public/typo3conf/ext/skom_sitepackage
+
+More info: <https://github.com/php-parallel-lint/PHP-Parallel-Lint>
 
 #### phpmd
 
