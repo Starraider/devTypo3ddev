@@ -26,6 +26,7 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Testing](#testing)
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
+      - [(S)CSS Linter](#scss-linter)
       - [PHP CodeSniffer](#php-codesniffer)
       - [php-cs-fixer](#php-cs-fixer)
       - [phpstan](#phpstan)
@@ -118,6 +119,18 @@ Linter for TypoScript.
 Example:
 
     typoscript-lint packages/customer_sitepackage/Configuration/TypoScript/setup.typoscript
+
+#### (S)CSS Linter
+
+Linter for CSS, SCSS, SASS, and LESS files.
+
+[More info>>](https://stylelint.io/)
+
+    npx stylelint --config ./.stylelintrc.json "path/to/dir/**/*.scss"
+
+Example:
+
+    npx stylelint --config ./.stylelintrc.json "packages/customer_sitepackage/**/*.{css,scss}" 
 
 #### PHP CodeSniffer
 

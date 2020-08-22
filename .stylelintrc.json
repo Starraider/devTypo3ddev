@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-twbs-bootstrap/css",
+  "rules": {
+    "indentation": 4,
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["extend", "function", "if", "each", "include", "mixin"]
+    }]
+  }
+}
