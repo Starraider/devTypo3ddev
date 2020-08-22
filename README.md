@@ -33,6 +33,7 @@ My base sitepackage skom_sitepackage is preinstalled.
       - [parallel-lint](#parallel-lint)
       - [phpmd](#phpmd)
       - [phploc](#phploc)
+      - [htmlhint](#htmlhint)
 
 ## Installation
 
@@ -229,6 +230,13 @@ Example:
 
     vendor/bin/phploc packages/customer_sitepackage
     vendor/bin/phploc public/typo3conf/ext/skom_sitepackage
+
+#### htmlhint
+
+Linter for HTML files or websites. Be aware this linter doesn't work with fluid templates!
+
+    npx htmlhint path/to/dir 
+    npx htmlhint https://www.mywebsite.de 
 
 ---
 
