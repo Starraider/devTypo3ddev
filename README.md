@@ -259,7 +259,8 @@ Example:
 
 #### htmlhint
 
-Linter for HTML files or websites. Be aware this linter doesn't work with fluid templates!
+Linter for HTML files or websites. Be aware this linter doesn't work with fluid templates! 
+But it can check websites! [[more >>]](https://htmlhint.com/)
 
     npx htmlhint path/to/dir 
     npx htmlhint https://www.mywebsite.de 
