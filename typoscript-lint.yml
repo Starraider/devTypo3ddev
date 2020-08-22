@@ -5,7 +5,7 @@ paths:
 filePatterns:
   - "*.typoscript"
 
-#excludePatterns:
+# excludePatterns:
 #  - "Constants.typoscript"
 
 sniffs:
