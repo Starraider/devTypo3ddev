@@ -113,8 +113,7 @@ Configuration: deploy.php
 #### TypoScript Linter
 
 Linter for TypoScript.
-
-[More info>>](https://github.com/martin-helmich/typo3-typoscript-lint)
+[[more >>]](https://github.com/martin-helmich/typo3-typoscript-lint)
 
     typoscript-lint path/to/your.typoscript
 
@@ -125,8 +124,7 @@ Example:
 #### (S)CSS Linter
 
 Linter for CSS, SCSS, SASS, and LESS files.
-
-[More info>>](https://stylelint.io/)
+[[more >>]](https://stylelint.io/)
 
     npx stylelint --config ./.stylelintrc.json "path/to/dir/**/*.scss"
 
@@ -137,8 +135,7 @@ Example:
 #### eslint
 
 Linter for JavaScript files, which can also automatically correct coding standard violations.
-
-[More info>>](https://eslint.org/)
+[[more >>]](https://eslint.org/)
 
     npx eslint "path/to/dir/**/*.js"
     npx eslint --fix "path/to/dir/**/*.js"
@@ -150,8 +147,7 @@ Example:
 #### bootlint
 
 Bootlint is a HTML linter for bootstrap projects.
-
-[More info>>](https://github.com/twbs/bootlint)
+[[more >>]](https://github.com/twbs/bootlint)
 
     npx bootlint "path/to/dir/**/*.html"
 
@@ -164,8 +160,7 @@ Example:
 PHP CodeSniffer is a linter, which can also automatically correct coding standard violations.
 
 Configuration file: phpcs.ruleset.xml
-
-[More info>>](https://github.com/squizlabs/PHP_CodeSniffer)
+[[more >>]](https://github.com/squizlabs/PHP_CodeSniffer)
 
     vendor/bin/phpcs path/to/dir
     vendor/bin/phpcs path/to/file
@@ -182,8 +177,7 @@ Use phpcbf to automatically fix as many errors as possible.
 #### php-cs-fixer
 
 PHP code standard fixer.
-
-[More info>>](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+[[more >>]](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
 
 To fix your php files automaticly:
 
@@ -206,8 +200,7 @@ Examples:
 #### phpstan
 
 PHP linter.
-
-[More info>>](https://github.com/phpstan/phpstan)
+[[more >>]](https://github.com/phpstan/phpstan)
 
     vendor/bin/phpstan analyse --level 0..8 path/to/dir
 
@@ -218,8 +211,7 @@ Example:
 #### parallel-lint
 
 Very fast php linter.
-
-[More info>>](https://github.com/php-parallel-lint/PHP-Parallel-Lint)
+[[more >>]](https://github.com/php-parallel-lint/PHP-Parallel-Lint)
 
     vendor/bin/parallel-lint path/to/dir
     vendor/bin/parallel-lint path/to/file
@@ -231,8 +223,7 @@ Example:
 #### phpmd
 
 PHP linter checking for possible bugs, suboptimal code, overcomplicated expressions and unused code.
-
-[More info>>](https://github.com/phpmd/phpmd)
+[[more >>]](https://github.com/phpmd/phpmd)
 
     vendor/bin/phpmd path/to/dir format ruleset
 
@@ -247,8 +238,7 @@ Example:
 #### phploc
 
 To get some statistics about your PHP project, you could use phploc
-
-[More info>>](https://github.com/sebastianbergmann/phploc)
+[[more >>]](https://github.com/sebastianbergmann/phploc)
 
     vendor/bin/phploc path/to/dir
 
