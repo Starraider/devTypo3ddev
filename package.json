@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "htmlhint": "^0.14.1",
     "stylelint": "^13.6.1",
     "stylelint-config-twbs-bootstrap": "^2.0.3",
     "stylelint-prettier": "^1.1.2",
