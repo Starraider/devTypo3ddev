@@ -13,6 +13,7 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Installation](#installation)
   - [Login](#login)
   - [Database](#database)
+  - [ddev](#ddev)
   - [TYPO3-Console](#typo3-console)
     - [Flush all caches](#flush-all-caches)
   - [Defined commands](#defined-commands)
@@ -38,8 +39,12 @@ My base sitepackage skom_sitepackage is preinstalled.
 
 ## Installation
 
+    mkdir myNewProject
+    cd myNewProject
+    git clone https://github.com/Starraider/devTypo3ddev .
     ddev start
     ddev composer install
+    ddev exec yarn install 
     ddev db-restore
     ddev fileadmin-restore
 
@@ -65,6 +70,20 @@ phpMyAdmin:
 <http://ddev-typo3.ddev.site:8036/>
 
 (Attention: don't use "https://" !)
+
+## ddev
+
+Get info about installed services:
+
+    ddev describe
+
+Single command execution:
+
+    ddev exec <command>
+
+Interactive bash:
+
+    ddev ssh
 
 ## TYPO3-Console
 
