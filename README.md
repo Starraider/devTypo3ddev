@@ -23,7 +23,8 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [warmup-dev](#warmup-dev)
     - [cron](#cron)
   - [Deployment](#deployment)
-      - [First deployment](#first-deployment)
+    - [First deployment](#first-deployment)
+    - [Deployment to beta or live server:](#deployment-to-beta-or-live-server)
   - [Testing](#testing)
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
@@ -120,15 +121,10 @@ Run 'ddev t3cron' if you need the Scheduler.
 
 For deployment we use [Deployer](https://deployer.org/).
 
-Edit the deploy.php
-
-    php vendor/bin/dep deploy -vv beta
-
-    php vendor/bin/dep unlock -vv beta 
-
-#### First deployment
+### First deployment
 
 Before the first deployment, you must enter your beta server and live server credentials in the deployer.php file.
+
 First deployment will fail, because you have to edit the .env file, which is automatically generated during the first deployment at the shared folder.
 
 On the beta server edit the .env file to:
@@ -142,6 +138,16 @@ On the live server edit the .env file to:
     TYPO3_CONTEXT="Production"
     INSTANCE="live" 
     And fill in the DB credentials of the live server.
+
+### Deployment to beta or live server:
+
+    php vendor/bin/dep deploy -vv beta
+    php vendor/bin/dep deploy -vv live
+
+If something went wrong, you have to unlock the deployment:
+
+    php vendor/bin/dep unlock -vv beta 
+    php vendor/bin/dep unlock -vv live
 
 ## Testing
 
