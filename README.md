@@ -27,6 +27,7 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
       - [(S)CSS Linter](#scss-linter)
+      - [eslint](#eslint)
       - [PHP CodeSniffer](#php-codesniffer)
       - [php-cs-fixer](#php-cs-fixer)
       - [phpstan](#phpstan)
@@ -132,6 +133,19 @@ Linter for CSS, SCSS, SASS, and LESS files.
 Example:
 
     npx stylelint --config ./.stylelintrc.json "packages/customer_sitepackage/**/*.{css,scss}" 
+
+#### eslint
+
+Linter for JavaScript files, which can also automatically correct coding standard violations.
+
+[More info>>](https://eslint.org/)
+
+    npx eslint "path/to/dir/**/*.js"
+    npx eslint --fix "path/to/dir/**/*.js"
+
+Example:
+
+    npx eslint "packages/customer_sitepackage/**/*.js"
 
 #### PHP CodeSniffer
 
