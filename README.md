@@ -28,6 +28,7 @@ My base sitepackage skom_sitepackage is preinstalled.
       - [TypoScript Linter](#typoscript-linter)
       - [(S)CSS Linter](#scss-linter)
       - [eslint](#eslint)
+      - [bootlint](#bootlint)
       - [PHP CodeSniffer](#php-codesniffer)
       - [php-cs-fixer](#php-cs-fixer)
       - [phpstan](#phpstan)
@@ -146,6 +147,18 @@ Linter for JavaScript files, which can also automatically correct coding standar
 Example:
 
     npx eslint "packages/customer_sitepackage/**/*.js"
+
+#### bootlint
+
+Bootlint is a HTML linter for bootstrap projects.
+
+[More info>>](https://github.com/twbs/bootlint)
+
+    npx bootlint "path/to/dir/**/*.html"
+
+Example:
+
+    npx bootlint "packages/customer_sitepackage/**/*.html" 
 
 #### PHP CodeSniffer
 
