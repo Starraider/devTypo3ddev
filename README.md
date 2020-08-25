@@ -139,12 +139,14 @@ On the beta-server edit the .env file to:
 
     TYPO3_CONTEXT="Development//Beta"
     INSTANCE="beta" 
+    PUBLIC_URL="https://your.beta-server.tld/"
     And fill in the DB credentials of the beta-server.
 
 On the live-server edit the .env file to:
 
     TYPO3_CONTEXT="Production"
     INSTANCE="live" 
+    PUBLIC_URL="https://your.live-server.tld/"
     And fill in the DB credentials of the live-server.
 
 ### Deployment to beta- or live-server
@@ -154,8 +156,8 @@ On the live-server edit the .env file to:
 
 If something went wrong, you have to unlock the deployment:
 
-    php vendor/bin/dep unlock -vv beta 
-    php vendor/bin/dep unlock -vv live
+    php vendor/bin/dep deploy:unlock -vv beta 
+    php vendor/bin/dep deploy:unlock -vv live
 
 ## Testing
 
