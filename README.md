@@ -13,7 +13,7 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Installation](#installation)
   - [Login](#login)
   - [Database](#database)
-  - [ddev](#ddev)
+  - [Useful ddev commands](#useful-ddev-commands)
   - [TYPO3-Console](#typo3-console)
     - [Flush all caches](#flush-all-caches)
   - [Defined commands](#defined-commands)
@@ -24,7 +24,7 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [cron](#cron)
   - [Deployment](#deployment)
     - [First deployment](#first-deployment)
-    - [Deployment to beta or live server:](#deployment-to-beta-or-live-server)
+    - [Deployment to beta- or live-server](#deployment-to-beta--or-live-server)
   - [Testing](#testing)
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
@@ -73,7 +73,7 @@ phpMyAdmin:
 
 (Attention: don't use "https://" !)
 
-## ddev
+## Useful ddev commands
 
 Get info about installed services:
 
@@ -86,6 +86,14 @@ Single command execution:
 Interactive bash:
 
     ddev ssh
+
+Restart current container:
+
+    ddev restart
+
+Shut down all containers:
+
+    ddev poweroff
 
 ## TYPO3-Console
 
@@ -123,23 +131,23 @@ For deployment we use [Deployer](https://deployer.org/).
 
 ### First deployment
 
-Before the first deployment, you must enter your beta server and live server credentials in the deployer.php file.
+Before the first deployment, you must enter your beta-server and live-server credentials in the deployer.php file.
 
 First deployment will fail, because you have to edit the .env file, which is automatically generated during the first deployment at the shared folder.
 
-On the beta server edit the .env file to:
+On the beta-server edit the .env file to:
 
     TYPO3_CONTEXT="Development//Beta"
     INSTANCE="beta" 
-    And fill in the DB credentials of the beta server.
+    And fill in the DB credentials of the beta-server.
 
-On the live server edit the .env file to:
+On the live-server edit the .env file to:
 
     TYPO3_CONTEXT="Production"
     INSTANCE="live" 
-    And fill in the DB credentials of the live server.
+    And fill in the DB credentials of the live-server.
 
-### Deployment to beta or live server:
+### Deployment to beta- or live-server
 
     php vendor/bin/dep deploy -vv beta
     php vendor/bin/dep deploy -vv live
