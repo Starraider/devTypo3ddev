@@ -1,4 +1,4 @@
-base: 'https://ddev-typo3.ddev.site/'
+base: '%env(PUBLIC_URL)%'
 baseVariants: {  }
 errorHandling:
   -
