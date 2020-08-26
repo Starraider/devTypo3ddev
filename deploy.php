@@ -5,7 +5,7 @@ require_once(__DIR__ . '/vendor/sourcebroker/deployer-loader/autoload.php');
 new \SourceBroker\DeployerExtendedTypo3\Loader();
 
 set('repository', 'https://github.com/Starraider/devTypo3ddev.git');
-set('bin/php', '');
+set('bin/php', '/usr/local/bin/php');
 set('web_path', 'public/');
 set('git_tty', true);
 
@@ -30,6 +30,7 @@ host('beta')
     ->set('branch', 'master')
     ->set('writable_mode', 'chmod')
     ->forwardAgent(true)
+    ->set('bin/composer', '/files/swm2/composer/composer.phar')
     ->set('public_urls', ['https://beta.skom-support.de'])
     ->set('deploy_path', '/home/www/p203341/html/devTypo3ddev/beta');
 
