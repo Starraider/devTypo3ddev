@@ -5,7 +5,6 @@ require_once(__DIR__ . '/vendor/sourcebroker/deployer-loader/autoload.php');
 new \SourceBroker\DeployerExtendedTypo3\Loader();
 
 set('repository', 'https://github.com/Starraider/devTypo3ddev.git');
-set('bin/php', '/usr/local/bin/php');
 set('web_path', 'public/');
 set('git_tty', true);
 
@@ -18,6 +17,8 @@ host('live')
     ->set('branch', 'master')
     ->set('writable_mode', 'chmod')
     ->forwardAgent(true)
+    ->set('bin/php', 'php')
+    ->set('bin/composer', 'php /files/swm2/composer/composer.phar')
     ->set('public_urls', ['https://www.skom-support.de'])
     ->set('deploy_path', '/home/www/p203341/html/devTypo3ddev/live');
 
@@ -30,7 +31,8 @@ host('beta')
     ->set('branch', 'master')
     ->set('writable_mode', 'chmod')
     ->forwardAgent(true)
-    ->set('bin/composer', '/files/swm2/composer/composer.phar')
+    ->set('bin/php', 'php')
+    ->set('bin/composer', 'php /files/swm2/composer/composer.phar')
     ->set('public_urls', ['https://beta.skom-support.de'])
     ->set('deploy_path', '/home/www/p203341/html/devTypo3ddev/beta');
 
@@ -38,6 +40,8 @@ host('local')
     ->hostname('local')
     ->set('deploy_path', getcwd())
     ->set('vhost_nocurrent', true)
+    ->set('bin/php', 'php')
+    ->set('bin/composer', 'php /usr/local/bin/composer')
     ->set('public_urls', ['https://ddev-typo3.ddev.site']);
 
 //********************************* */
