@@ -10,6 +10,8 @@ This is my local developer enviroment.
 My base sitepackage skom_sitepackage is preinstalled.
 
 - [devTYPO3v10DDEV](#devtypo3v10ddev)
+  - [Basic concept](#basic-concept)
+  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Login](#login)
   - [Database](#database)
@@ -38,6 +40,15 @@ My base sitepackage skom_sitepackage is preinstalled.
       - [phpmd](#phpmd)
       - [phploc](#phploc)
       - [htmlhint](#htmlhint)
+
+## Basic concept
+
+The basic idea behind this project is to have an optimal development environment that I can use as a basis for all new customer projects.  All modern best practices for TYPO3 projects should be applied.
+The development environment should also provide all the necessary linting and testing tools. Furthermore, automated deployment to a beta-server as well as to the live-server should be as easy as possible.
+
+## Prerequisites
+
+A latest version of [Docker](https://www.docker.com/) and [ddev-local](https://www.ddev.com/ddev-local/) must be available on the local system.
 
 ## Installation
 
