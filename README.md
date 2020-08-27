@@ -17,7 +17,6 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Database](#database)
   - [Useful ddev commands](#useful-ddev-commands)
   - [TYPO3-Console](#typo3-console)
-    - [Flush all caches](#flush-all-caches)
   - [Defined commands](#defined-commands)
     - [db-backup](#db-backup)
     - [db-restore](#db-restore)
@@ -86,10 +85,6 @@ phpMyAdmin:
 
 ## Useful ddev commands
 
-Get info about installed services:
-
-    ddev describe
-
 Single command execution:
 
     ddev exec <command>
@@ -98,21 +93,13 @@ Interactive bash:
 
     ddev ssh
 
-Restart current container:
-
-    ddev restart
-
-Shut down all containers:
-
-    ddev poweroff
+Here you can find more usefull [ddev commands](https://gist.github.com/Starraider/917e84487cb6f6286e7338beb0597504)
 
 ## TYPO3-Console
 
 Use 'ddev typo3cms ...' to use the TYPO3-Console.
 
-### Flush all caches
-
-    ddev typo3cms cache:flush
+Here you can find more usefull [console commands](https://gist.github.com/Starraider/740b09f7fe6b87206e24c255d0e89a57)
 
 ## Defined commands
 
