@@ -19,7 +19,7 @@ host('live')
     ->forwardAgent(true)
     ->set('bin/php', 'php')
     ->set('bin/composer', 'php /files/swm2/composer/composer.phar')
-    ->set('public_urls', ['https://www.skom-support.de'])
+    ->set('public_urls', ['https://live.skom-support.de'])
     ->set('deploy_path', '/home/www/p203341/html/devTypo3ddev/live');
 
 host('beta')
