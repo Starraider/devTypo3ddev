@@ -51,6 +51,3 @@ task('pwd', function () {
     $result = run('pwd');
     writeln("Current dir: $result");
 });
-
-
-
