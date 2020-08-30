@@ -1,10 +1,13 @@
 {
   "devDependencies": {
     "@commitlint/config-conventional": "^9.1.2",
+    "@commitlint/parse": "^9.1.2",
     "bootlint": "^1.1.0",
+    "commitlint": "^9.1.2",
     "eslint": "^7.7.0",
     "eslint-config-google": "^0.14.0",
     "htmlhint": "^0.14.1",
+    "husky": "^4.2.5",
     "stylelint": "^13.6.1",
     "stylelint-config-twbs-bootstrap": "^2.0.3",
     "stylelint-prettier": "^1.1.2",
