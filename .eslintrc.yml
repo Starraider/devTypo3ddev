@@ -1,8 +1,11 @@
 env:
   browser: true
   es2020: true
+plugins:
+  - yaml
 extends:
   - google
+  - plugin:yaml/recommended
 parserOptions:
   ecmaVersion: 11
 rules: {}
