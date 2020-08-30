@@ -185,18 +185,20 @@ Example:
 
 #### eslint
 
-Linter for JavaScript and Yaml files, which can also automatically correct coding standard violations.
+Linter for JavaScript, yaml and markdown files, which can also automatically correct coding standard violations.
 [[more >>]](https://eslint.org/)
 
     npx eslint "path/to/dir/**/*.js"
     npx eslint --fix "path/to/dir/**/*.js"
     npx eslint "path/to/file/file.yaml"
     npx eslint . --ext .yml
+    npx eslint file.md
 
 Example:
 
     npx eslint "packages/customer_sitepackage/**/*.js"
     npx eslint "packages/customer_sitepackage/**/*.{yaml,yml}"
+    npx eslint README.md
 
 #### bootlint
 
