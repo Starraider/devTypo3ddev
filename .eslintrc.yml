@@ -3,9 +3,11 @@ env:
   es2020: true
 plugins:
   - yaml
+  - html
 extends:
   - google
   - plugin:yaml/recommended
+  - eslint:recommended
 parserOptions:
   ecmaVersion: 11
 rules: {}
