@@ -4,10 +4,11 @@ env:
 plugins:
   - yaml
   - html
+  - md
 extends:
   - google
   - plugin:yaml/recommended
-  - eslint:recommended
+  - plugin:md/recommended
 parserOptions:
   ecmaVersion: 11
 rules: {}
