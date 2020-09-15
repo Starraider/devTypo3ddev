@@ -13,7 +13,13 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Basic concept](#basic-concept)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Login](#login)
+    - [Setup](#setup)
+      - [1. Detach from original repo](#1-detach-from-original-repo)
+      - [2. Edit project name](#2-edit-project-name)
+      - [3. Config the beta-server](#3-config-the-beta-server)
+      - [4. Config the live-server](#4-config-the-live-server)
+      - [5. Make your own Github repo](#5-make-your-own-github-repo)
+  - [Start and Login](#start-and-login)
   - [Database](#database)
   - [Useful ddev commands](#useful-ddev-commands)
   - [TYPO3-Console](#typo3-console)
@@ -54,27 +60,65 @@ A latest version of [Docker](https://www.docker.com/) and [ddev-local](https://w
     mkdir myNewProject
     cd myNewProject
     git clone https://github.com/Starraider/devTypo3ddev .
+    git submodule update --init --recursive
     ddev start
     ddev composer install
     ddev exec yarn install 
     ddev db-restore
     ddev fileadmin-restore
 
-    ddev open 
+(If you get an error msg on MacOS, saying your folder is not empty:  
+*rm .DS_Store*)
+
+### Setup
+
+Before start working with your freshly installed project, follow the next steps:
+
+#### 1. Detach from original repo  
+
+For your own project you should detach your lokal repo from the original Github repo:
+
+    git remote rm origin
+
+Later you will edit the styles and templates etc. in your own custom sitepackage. We already installed a custom sitepackage as a starting point for you in /packages/custom_sitepackage. You should detach the custom_sitepackage from its original repo as well:
+
+    cd /packages/custom_sitepackage  
+    git remote rm origin
+
+#### 2. Edit project name
+
+You should change the project name in two files (must be the same in both files, use lowercase):
+
+- .ddev/config.yaml   ->  
+    name=my-project
+- .env  ->  
+    PUBLIC_URL="https://my-project.ddev.site/"
+
+#### 3. Config the beta-server
+
+#### 4. Config the live-server
+
+#### 5. Make your own Github repo
+
+## Start and Login
+
+After [Setup](#setup) you should restart ddev:
+
+    ddev restart
+
+Now you can start the project in your webbrowser in 3 different ways:
+
+    ddev open    // Opens TYPO3-Frontend
 
 or
 
-    ddev open -t
+    ddev open -t    // Opens TYPO3-Backend
 
-or
+or just open https://my-project.ddev.site in your Webbrowser.
 
-<https://ddev-typo3.ddev.site>
-
-## Login
-
-TYPO3 Login
-dev-admin : dev-admin
-Intalltool: admin123
+**TYPO3-Backend Login:**  
+Username: dev-admin  
+Passwort (same for the Intalltool): admin123
 
 ## Database
 
