@@ -15,10 +15,9 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Installation](#installation)
     - [Setup](#setup)
       - [1. Detach from original repo](#1-detach-from-original-repo)
-      - [2. Edit project name](#2-edit-project-name)
-      - [3. Config the beta-server](#3-config-the-beta-server)
-      - [4. Config the live-server](#4-config-the-live-server)
-      - [5. Make your own Github repo](#5-make-your-own-github-repo)
+      - [2. Config the beta-server](#2-config-the-beta-server)
+      - [3. Config the live-server](#3-config-the-live-server)
+      - [4. Make your own Github repo](#4-make-your-own-github-repo)
   - [Start and Login](#start-and-login)
   - [Database](#database)
   - [Useful ddev commands](#useful-ddev-commands)
@@ -59,16 +58,23 @@ A latest version of [Docker](https://www.docker.com/) and [ddev-local](https://w
 
     mkdir myNewProject
     cd myNewProject
-    git clone https://github.com/Starraider/devTypo3ddev .
+    git[^folderNotEmpty] clone https://github.com/Starraider/devTypo3ddev .
     git submodule update --init --recursive
+
+[^folderNotEmpty]: If you get an error msg on MacOS, saying your folder is not empty:  
+*rm .DS_Store*
+
+Change the project name in **.ddev/config.yaml** and **.env** (must be the same name in both files, use lowercase):
+
+    mcedit .ddev/config.yaml 
+      name=my-project
+    mcedit .env
+      PUBLIC_URL="https://my-project.ddev.site/"     
     ddev start
     ddev composer install
     ddev exec yarn install 
     ddev db-restore
     ddev fileadmin-restore
-
-(If you get an error msg on MacOS, saying your folder is not empty:  
-*rm .DS_Store*)
 
 ### Setup
 
@@ -82,23 +88,20 @@ For your own project you should detach your lokal repo from the original Github 
 
 Later you will edit the styles and templates etc. in your own custom sitepackage. We already installed a custom sitepackage as a starting point for you in /packages/custom_sitepackage. You should detach the custom_sitepackage from its original repo as well:
 
-    cd /packages/custom_sitepackage  
-    git remote rm origin
+    git rm --cached packages/customer_sitepackage   
+    rm .gitmodules
+    rm -rf packages/customer_sitepackage/.git
+    rm -rf packages/customer_sitepackage/.github
+    rm -rf .git/modules/packages/customer_sitepackage
 
-#### 2. Edit project name
+#### 2. Config the beta-server
 
-You should change the project name in two files (must be the same in both files, use lowercase):
+#### 3. Config the live-server
 
-- .ddev/config.yaml   ->  
-    name=my-project
-- .env  ->  
-    PUBLIC_URL="https://my-project.ddev.site/"
+#### 4. Make your own Github repo
 
-#### 3. Config the beta-server
-
-#### 4. Config the live-server
-
-#### 5. Make your own Github repo
+    hub create    
+    git push -u origin HEAD 
 
 ## Start and Login
 
