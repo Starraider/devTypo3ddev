@@ -65,15 +65,17 @@ A latest version of [Docker](https://www.docker.com/) and [ddev-local](https://w
 
 Change the project name in **.ddev/config.yaml** and **.env** (must be the same name in both files, use lowercase):
 
-    mcedit .ddev/config.yaml 
+    mcedit .ddev/config.yaml   [2]
       name=my-project
-    mcedit .env
+    mcedit .env   [2]
       PUBLIC_URL="https://my-project.ddev.site/"     
     ddev start
     ddev composer install
     ddev exec yarn install 
     ddev db-restore
     ddev fileadmin-restore
+
+[2]: You can of course use your favorite editor to edit the files.
 
 ### Setup
 
