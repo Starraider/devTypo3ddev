@@ -13,7 +13,6 @@ My base sitepackage skom_sitepackage is preinstalled.
   - [Basic concept](#basic-concept)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-          - [f1: If you get an error msg on MacOS, saying your folder is not empty:  *rm .DS_Store*](#f1-if-you-get-an-error-msg-on-macos-saying-your-folder-is-not-empty-rm-ds_store)
     - [Setup](#setup)
       - [1. Detach from original repo](#1-detach-from-original-repo)
       - [2. Config the beta-server](#2-config-the-beta-server)
@@ -59,10 +58,10 @@ A latest version of [Docker](https://www.docker.com/) and [ddev-local](https://w
 
     mkdir myNewProject
     cd myNewProject
-    git clone https://github.com/Starraider/devTypo3ddev . [1](######f1)
+    git clone https://github.com/Starraider/devTypo3ddev . [1]
     git submodule update --init --recursive
 
-###### f1: If you get an error msg on MacOS, saying your folder is not empty:  *rm .DS_Store*
+[1]: If you get an error msg on MacOS, saying your folder is not empty:  *rm .DS_Store*
 
 Change the project name in **.ddev/config.yaml** and **.env** (must be the same name in both files, use lowercase):
 
