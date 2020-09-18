@@ -58,11 +58,11 @@ A latest version of [Docker](https://www.docker.com/) and [ddev-local](https://w
 
     mkdir myNewProject
     cd myNewProject
-    git[^folderNotEmpty] clone https://github.com/Starraider/devTypo3ddev .
+    git clone https://github.com/Starraider/devTypo3ddev . <sup id="a1">[1](#f1)</sup>
     git submodule update --init --recursive
 
-[^folderNotEmpty]: If you get an error msg on MacOS, saying your folder is not empty:  
-*rm .DS_Store*
+<b id="f1">1</b>: If you get an error msg on MacOS, saying your folder is not empty:  
+*rm .DS_Store* [↩](#a1)
 
 Change the project name in **.ddev/config.yaml** and **.env** (must be the same name in both files, use lowercase):
 
