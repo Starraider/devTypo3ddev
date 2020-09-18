@@ -1,0 +1,3 @@
+[submodule "packages/customer_sitepackage"]
+	path = packages/customer_sitepackage
+	url = https://github.com/Starraider/customer_sitepackage.git
