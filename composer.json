@@ -16,7 +16,7 @@
   },
   "require": {
     "helhum/typo3-console": "^6.3",
-    "skom/skom-sitepackage": "dev-develop",
+    "skom/customer-sitepackage": "@dev",
     "sourcebroker/deployer-extended-typo3": "^13.1",
     "typo3/cms-about": "^10.4",
     "typo3/cms-backend": "^10.4",

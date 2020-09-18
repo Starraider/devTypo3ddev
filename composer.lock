@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75ae39451980b73ea3eaf97bfe0846ca",
+    "content-hash": "8fad173a798b0337e253f9177d0813d5",
     "packages": [
         {
             "name": "bk2k/bootstrap-package",
@@ -1849,17 +1849,47 @@
             "time": "2020-09-07T21:15:42+00:00"
         },
         {
+            "name": "skom/customer-sitepackage",
+            "version": "9.0.3",
+            "dist": {
+                "type": "path",
+                "url": "./packages/customer_sitepackage",
+                "reference": "7a429102ad3f97067774c296db2ded446e6f0db9"
+            },
+            "require": {
+                "bk2k/bootstrap-package": "^11.0",
+                "skom/skom-sitepackage": "^9.2"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Skom\\CustomerSitepackage\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Individual sitepackage for SKom customers",
+            "homepage": "https://www.skom.de",
+            "keywords": [
+                "TYPO3 CMS"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "skom/skom-sitepackage",
-            "version": "dev-develop",
+            "version": "9.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Starraider/skom_sitepackage.git",
-                "reference": "22f134b394904854faaaf22604e123ebf3abc654"
+                "reference": "f68c400ce97507e9b84faf1d3c52bd376b75cbd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Starraider/skom_sitepackage/zipball/22f134b394904854faaaf22604e123ebf3abc654",
-                "reference": "22f134b394904854faaaf22604e123ebf3abc654",
+                "url": "https://api.github.com/repos/Starraider/skom_sitepackage/zipball/f68c400ce97507e9b84faf1d3c52bd376b75cbd6",
+                "reference": "f68c400ce97507e9b84faf1d3c52bd376b75cbd6",
                 "shasum": ""
             },
             "require": {
@@ -1887,7 +1917,7 @@
             "keywords": [
                 "TYPO3 CMS"
             ],
-            "time": "2020-08-15T11:12:11+00:00"
+            "time": "2020-08-15T10:53:44+00:00"
         },
         {
             "name": "sourcebroker/deployer-extended",
@@ -8230,7 +8260,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "skom/skom-sitepackage": 20
+        "skom/customer-sitepackage": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
