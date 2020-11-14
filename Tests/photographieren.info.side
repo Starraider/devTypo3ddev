@@ -1,0 +1,109 @@
+{
+  "id": "f9c3d90b-e728-4ccf-aa36-dc002126ec66",
+  "version": "2.0",
+  "name": "photographieren.info",
+  "url": "https://www.photographieren.info",
+  "tests": [{
+    "id": "6acae2d0-7c96-457c-8330-2be3d7627056",
+    "name": "SearchTest",
+    "commands": [{
+      "id": "b2bd9587-6330-47c1-92de-914dae485401",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f54816ff-074b-448d-b6a2-585a7257adbe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x735",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b37f258-ba53-4de2-89f6-81a60078b6fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=#nav-item-368 > .nav-link-text",
+      "targets": [
+        ["css=#nav-item-368 > .nav-link-text", "css:finder"],
+        ["xpath=//a[@id='nav-item-368']/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Suche')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65655b7b-9c74-497a-9593-2bbb33ac1f3a",
+      "comment": "",
+      "command": "click",
+      "target": "id=ke_search_sword",
+      "targets": [
+        ["id=ke_search_sword", "id"],
+        ["name=tx_kesearch_pi1[sword]", "name"],
+        ["css=#ke_search_sword", "css:finder"],
+        ["xpath=//input[@id='ke_search_sword']", "xpath:attributes"],
+        ["xpath=//form[@id='form_kesearch_pi1']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b98116f-9754-4f33-85de-c271e04f2396",
+      "comment": "",
+      "command": "type",
+      "target": "id=ke_search_sword",
+      "targets": [
+        ["id=ke_search_sword", "id"],
+        ["name=tx_kesearch_pi1[sword]", "name"],
+        ["css=#ke_search_sword", "css:finder"],
+        ["xpath=//input[@id='ke_search_sword']", "xpath:attributes"],
+        ["xpath=//form[@id='form_kesearch_pi1']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Athen"
+    }, {
+      "id": "2a0af9df-9bd7-43c3-9033-d7f19f5c4e66",
+      "comment": "",
+      "command": "click",
+      "target": "css=.submitbutt > input",
+      "targets": [
+        ["css=.submitbutt > input", "css:finder"],
+        ["xpath=//input[@value='Finden']", "xpath:attributes"],
+        ["xpath=//form[@id='form_kesearch_pi1']/fieldset/span[2]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d53a4d88-3aec-49a9-9a7d-2b4d25d15d29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.result-list-item:nth-child(1) > .result-title .hit",
+      "targets": [
+        ["css=.result-list-item:nth-child(1) > .result-title .hit", "css:finder"],
+        ["xpath=//div[@id='kesearch_results']/div/span[2]/a/span", "xpath:idRelative"],
+        ["xpath=//span[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7aab7c7-ef32-4b38-8e74-a0718de779ad",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.textmedia-item span",
+      "targets": [
+        ["css=.textmedia-item span", "css:finder"],
+        ["xpath=//div[@id='c345']/div/div/div/div[2]/header/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"]
+      ],
+      "value": "Athen"
+    }]
+  }],
+  "suites": [{
+    "id": "28f4927a-21e5-4b2f-9eff-e4ad9b4bb444",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6acae2d0-7c96-457c-8330-2be3d7627056"]
+  }],
+  "urls": ["https://www.photographieren.info/"],
+  "plugins": []
+}
