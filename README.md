@@ -32,6 +32,8 @@ My base sitepackage skom_sitepackage is preinstalled.
     - [First deployment](#first-deployment)
     - [Deployment to beta- or live-server](#deployment-to-beta--or-live-server)
   - [Testing](#testing)
+    - [Code maintenance](#code-maintenance)
+      - [(TYPO3-)Rector](#typo3-rector)
     - [Linting](#linting)
       - [TypoScript Linter](#typoscript-linter)
       - [(S)CSS Linter](#scss-linter)
@@ -68,10 +70,10 @@ Change the project name in **.ddev/config.yaml** and **.env** (must be the same 
     mcedit .ddev/config.yaml   [2]
       name=my-project
     mcedit .env   [2]
-      PUBLIC_URL="https://my-project.ddev.site/"     
+      PUBLIC_URL="https://my-project.ddev.site/"
     ddev start
     ddev composer install
-    ddev exec yarn install 
+    ddev exec yarn install
     ddev db-restore
     ddev fileadmin-restore
 
@@ -81,7 +83,7 @@ Change the project name in **.ddev/config.yaml** and **.env** (must be the same 
 
 Before start working with your freshly installed project, follow the next steps:
 
-#### 1. Detach from original repo  
+#### 1. Detach from original repo
 
 For your own project you should detach your lokal repo from the original Github repo:
 
@@ -89,7 +91,7 @@ For your own project you should detach your lokal repo from the original Github 
 
 Later you will edit the styles and templates etc. in your own custom sitepackage. We already installed a custom sitepackage as a starting point for you in /packages/custom_sitepackage. You should detach the custom_sitepackage from its original repo as well:
 
-    git rm --cached packages/customer_sitepackage   
+    git rm --cached packages/customer_sitepackage
     rm .gitmodules
     rm -rf packages/customer_sitepackage/.git
     rm -rf packages/customer_sitepackage/.github
@@ -101,8 +103,8 @@ Later you will edit the styles and templates etc. in your own custom sitepackage
 
 #### 4. Make your own Github repo
 
-    hub create    
-    git push -u origin HEAD 
+    hub create
+    git push -u origin HEAD
 
 ## Start and Login
 
@@ -120,8 +122,8 @@ or
 
 or just open https://my-project.ddev.site in your Webbrowser.
 
-**TYPO3-Backend Login:**  
-Username: dev-admin  
+**TYPO3-Backend Login:**
+Username: dev-admin
 Passwort (same for the Intalltool): admin123
 
 ## Database
@@ -184,14 +186,14 @@ First deployment will fail, because you have to edit the .env file, which is aut
 On the beta-server edit the .env file to:
 
     TYPO3_CONTEXT="Development//Beta"
-    INSTANCE="beta" 
+    INSTANCE="beta"
     PUBLIC_URL="https://your.beta-server.tld/"
     And fill in the DB credentials of the beta-server.
 
 On the live-server edit the .env file to:
 
     TYPO3_CONTEXT="Production"
-    INSTANCE="live" 
+    INSTANCE="live"
     PUBLIC_URL="https://your.live-server.tld/"
     And fill in the DB credentials of the live-server.
 
@@ -202,10 +204,29 @@ On the live-server edit the .env file to:
 
 If something went wrong, you have to unlock the deployment:
 
-    php vendor/bin/dep deploy:unlock -vv beta 
+    php vendor/bin/dep deploy:unlock -vv beta
     php vendor/bin/dep deploy:unlock -vv live
 
 ## Testing
+
+### Code maintenance
+
+#### (TYPO3-)Rector
+
+Rector can help you with maintenance your PHP code by analyse it for changes you should fix.
+Rector can even change your code for you. With the additional TYPO3-Rectors it can help you with keeping up with the changes in the TYPO3-System.
+[[more >>]](https://github.com/sabbelasichon/typo3-rector)
+
+Dry run:
+
+    vendor/bin/typo3-rector process packages/customer_sitepackage --dry-run
+
+Let's rector do the work for you:
+
+    vendor/bin/typo3-rector process packages/customer_sitepackage
+
+You can config Rector in the rector.php file.
+
 
 ### Linting
 
@@ -229,7 +250,7 @@ Linter for CSS, SCSS, SASS, and LESS files.
 
 Example:
 
-    npx stylelint --config ./.stylelintrc.json "packages/customer_sitepackage/**/*.{css,scss}" 
+    npx stylelint --config ./.stylelintrc.json "packages/customer_sitepackage/**/*.{css,scss}"
 
 #### eslint
 
@@ -257,7 +278,7 @@ Bootlint is a HTML linter for bootstrap projects.
 
 Example:
 
-    npx bootlint "packages/customer_sitepackage/**/*.html" 
+    npx bootlint "packages/customer_sitepackage/**/*.html"
 
 #### PHP CodeSniffer
 
@@ -356,8 +377,8 @@ Example:
 Linter for HTML files or websites. Be aware this linter doesn't work with fluid templates!
 But it can check websites! [[more >>]](https://htmlhint.com/)
 
-    npx htmlhint path/to/dir 
-    npx htmlhint https://www.mywebsite.de 
+    npx htmlhint path/to/dir
+    npx htmlhint https://www.mywebsite.de
 
 ---
 
