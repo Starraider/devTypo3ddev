@@ -1,5 +1,5 @@
 {
-  "name": "typo3/cms-base-distribution",
+  "name": "starraider/devtypo3ddev",
   "description": "TYPO3 Developer",
   "license": "GPL-2.0-or-later",
   "repositories": [
@@ -22,7 +22,7 @@
     "typo3/cms-backend": "^10.4",
     "typo3/cms-belog": "^10.4",
     "typo3/cms-beuser": "^10.4",
-    "typo3/cms-core": "^10.4",
+    "typo3/cms-core": "10.4.12",
     "typo3/cms-dashboard": "^10.4",
     "typo3/cms-extbase": "^10.4",
     "typo3/cms-extensionmanager": "^10.4",
@@ -60,7 +60,7 @@
     "phpmd/phpmd": "^2.8",
     "phpstan/phpstan": "^0.12.11",
     "squizlabs/php_codesniffer": "^3.5",
-    "ssch/typo3-rector": "^0.5.1",
+    "ssch/typo3-rector": "^0.8",
     "typo3/cms-adminpanel": "^10.4"
   },
   "conflict":  {
