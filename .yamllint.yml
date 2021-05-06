@@ -1,3 +1,7 @@
----
+# configuration file for yamllint
+# Also used by Super-Linter
+
+extends: default
+
 rules:
-  document-start: false
+    document-start: false
