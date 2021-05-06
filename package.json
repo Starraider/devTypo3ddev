@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.1",
     "bootlint": "^1.1.0",
     "eslint": "^7.7.0",
     "eslint-config-google": "^0.14.0",
